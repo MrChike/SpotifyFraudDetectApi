@@ -2,7 +2,7 @@
 .vscode
 .env
 
-### Spring ###
+### Spotify Spring ###
 
 spotify_spring/HELP.md
 spotify_spring/target/
@@ -50,7 +50,7 @@ spotify_spring/.sts4-cache
 spotify_spring/.git-hooks/
 
 
-### Django ###
+### Spotify Django ###
 spotify_django/*.log
 spotify_django/*.pot
 spotify_django/*.pyc
