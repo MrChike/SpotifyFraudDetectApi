@@ -1,13 +1,13 @@
-package com.spotify.microservice.fraud_detect;
+package com.microservice.fraud_detect.spring.spring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FraudDetectionApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FraudDetectionApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }
