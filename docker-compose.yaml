@@ -1,9 +1,26 @@
+version: "3.8"
+
 services:
-  postgres:
-    image: 'postgres:latest'
-    environment:
-      - 'POSTGRES_DB=mydatabase'
-      - 'POSTGRES_PASSWORD=secret'
-      - 'POSTGRES_USER=myuser'
+  fastapi_ms:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fastapi-microservice
     ports:
-      - '5432'
+      - "8000:8000"  # Optional, useful for direct access
+    restart: always
+    volumes:
+      - ./fastapi_ms:/app
+    expose:
+      - 8000
+
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx
+    container_name: nginx-proxy
+    ports:
+      - "80:80"
+    depends_on:
+      - fastapi_ms
+    restart: always

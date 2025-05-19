@@ -75,3 +75,5 @@ fastapi/!.vscode/launch.json
 fastapi/!.vscode/extensions.json 
 fastapi/.history
 fastapi/**/__pycache__/
+fastapi/.env/
+fastapi/shared/configs/.env
